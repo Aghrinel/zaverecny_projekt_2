@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Netflix (skoro)</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--font-family: roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+
+    <!--navigace-->
+    <header>
+        <div class="header">
+            <img class="logo" src="assets/images/netflix-logo.png" alt="logo Netflix" onclick="window.location.href='index.html'"/>
+            <button id = "button-for-return" class="button-style" onclick="window.location.href='index.html'">Úvodní strana</button>
+        </div>
+
+    </header>
+
+    <!--Fomulář pro registraci-->
+
+    <form action="" class="form-registration" row>
+    
+        <input type="text" placeholder="Křestní jméno" class="first-name" id="firstname" required>
+        <div class="notificationFirstname notification-invisible" id="firstname-error"></div>
+        
+        <input type="text" placeholder="Příjmení" class="last-name" id ="lastname" required>
+        <div class="notificationLastname notification-invisible" id="lastname-error"></div>
+
+        <input type="email" placeholder="Přihlašovací e-mail" class="registration-mail" id="registrationmail" required>
+        <div class="notificationMail notification-invisible" id = "mail-error"></div>
+
+        <input type="password" placeholder="Vaše heslo" class="password-required" id = "password" required>
+        <div class="notificationPasswordRequired notification-invisible" id="password-error"></div>
+
+        <input type="password" placeholder="Heslo znovu" class = "password-confirm" id = "confirm-password" required>
+        <div class="notificationPasswordConfirm notification-invisible" id="confirm-password-error"></div>
+        <button class="button-registration" type="submit">Odeslat</button>
+
+    </form>
+    
+    <script type="module" src="dist/registration.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+/*--------------------------------------------------------
+--------------------NASTAVENÍ PRO MOBIL-------------------
+--------------------------------------------------------*/
+
+/*Obecná nastavení*/
+body,
+html {
+  font-family: "roboto", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-width: 320px;
+  background-color: var(--backgroundblack);
+  font-size: 1rem;
+}
+
+:root {
+  --backgroundblack: #000000;
+  --basicred: #d61c1c;
+  --fontwhite: #ffffff;
+  --formgreycolor: #8c8c8c;
+}
+
+
+.button-style {
+  background-color: var(--basicred);
+  color: var(--fontwhite);
+  border: none;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #c11119;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/*Tohle je nastavení hlavičky všech stránek*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+  display: block;
+  height: 2rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/*Tohle je nastavení pro hero sekci*/
+.image-container {
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: calc(100vh - 3rem);
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-container {
+    margin-bottom: 30px;
+}
+
+.hero-content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.title-hero, .under-title-hero, .hero-text {
+  color: var(--fontwhite);
+  padding: 5px;
+}
+
+
+.title-hero {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.under-title-hero {
+  font-size: 1.5rem;
+  /*margin: 0 auto;*/
+}
+
+.title-hero {
+  font-size: 2.5rem;
+  font-weight: 700;
+  /*margin: 0 auto;*/
+}
+
+
+/*Tohle je nastavení pro formulář v hero sekci*/
+.hero-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.hero-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--formgreycolor);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--fontwhite)
+}
+
+.hero-form input::placeholder {
+  color: var(--formgreycolor);
+}
+
+.hero-form button {
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  background-color: var(--basicred);
+  color: var(--fontwhite);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero-form button:hover {
+  background-color: #c11119;
+}
+
+
+/*Tohle je nastavení pro sekci náhledů filmů*/
+.film-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+          grid-template-areas:
+             "a"
+             "b" 
+             "c";
+    gap: 20px;
+    width: 70%;
+}
+
+.image-1 {
+  grid-area: a;
+}
+
+.image-2 {
+  grid-area: b;
+}
+
+.image-3 {
+  grid-area: c;
+}
+
+.film-container img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.film-container img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+.film-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/*Tohle je nastavení pro footer*/
+.content li{
+  margin: 9px;
+}
+
+footer a {
+  color: var(--fontwhite);
+}
+
+
+/*Tohle je nastavení pro scrollovací šipku*/
+.scroll-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0;
+}
+
+.scroll-to-top i {
+  font-size: 2.9rem;
+  color: #e50914;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.05);
+  background: transparent;
+}
+
+
+/*Nastavení registračního formuláře*/
+.form-registration {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.form-registration input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--formgreycolor);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--fontwhite);
+}
+
+.form-registration input::placeholder {
+  color: var(--formgreycolor);
+}
+
+.form-registration button {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  background-color: var(--basicred);
+  color: var(--fontwhite);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-registration button:hover {
+  background-color: #c11119;
+}
+
+
+/*Nastavení stránky s výběrem filmů*/
+.movie-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.movie-select {
+  background-color: var(--backgroundblack);
+  color: var(--fontwhite);
+  padding: 0.5rem;
+  border-color: var(--basicred);
+  border-radius: 5px;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid var(--basicred);
+}
+
+
+/*Nastavení filtrovaných serálů pomocí API*/
+.serials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  color: var(--fontwhite);
+}
+
+.serial-box:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/*Nastavení skrytých elementů a chybových hlášek*/
+.scroll-to-top-invisible,
+.notification-invisible {
+  display: none;
+}
+
+.notification-visible {
+  display: block;
+  color: var(--basicred);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+input.invalid {
+  border: 1px solid red;
+}
+
+
+
+/*--------------------------------------------------------
+--------------------NASTAVENÍ PRO TABLET------------------
+--------------------------------------------------------*/
+@media screen and (min-width: 769px) {
+
+}
+
+
+/*--------------------------------------------------------
+-------------------DESKTOP NASTAVENÍ----------------------
+--------------------------------------------------------*/
+
+@media screen and (min-width: 992px) {
+
+/*Tohle je nastavení pro sekci náhledů filmů*/
+.film-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+          grid-template-areas:
+             "a b c";
+
+    width: 90%;
+}
+
+
+/*Tohle je nastavení pro footer*/
+.content ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 220px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+}
