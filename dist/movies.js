@@ -44,7 +44,6 @@ const getAllSerial = (selectValue) => {
         renderSerials(data);
     })
         .catch(() => {
-        console.log("Nastala chyba při načítání dat z API");
         movieSelection.textContent = "Filmy se nepodařilo načíst. Zkus to prosím znovu.";
     });
 };
